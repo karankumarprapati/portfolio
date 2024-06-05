@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+	body{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	
+    .keyboard{
+        width: 95%;
+        border-radius: 3%;
+        height: 40%;
+        margin: auto;
+    }
+
+    .ok{
+        height: 30px;
+        width: 40px;
+        margin-top: 13px;
+        background-color: aliceblue;
+        border-radius: 30%;
+        border: 1px solid black;
+        padding-right: 8px;
+        margin-left: 10px;
+    }
+	b{
+		margin-left: 90px;
+		color: white;
+		border-bottom: 1px solid burlywood;
+	}
+	.back{
+		height: 27px;
+		width: 57px;
+		border: 3px solid white;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+	}
+	.green{
+		height: 27px;
+		width: 57px;
+		border: 3px solid white;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		background-color: green;
+	}
+	.num{
+		height: 27px;
+		width: 57px;
+		border: 3px solid white;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+	}
+	.red{
+		height: 27px;
+		width: 57px;
+		border: 3px solid white;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		background-color: red;
+	}
+	
+	.jio{
+		height: 540px;
+		width: 240px;
+		background-color: rgba(0, 0, 0, 0.885);
+		float: right;
+		border-radius: 4%;
+		border-bottom-left-radius: 7%;
+		border-bottom-right-radius: 7%;
+		border: 1px solid black;
+	}
+	.jio2{
+		height: 524px;
+		width: 228px;
+		background-color: rgba(0, 0, 0, 0.069);
+		margin-top: 2px;
+		margin: auto;
+		border-radius: 3%;
+		border: 1px solid black;
+	}
+	.display2{
+		height: 300px;
+		width: 226px;
+		margin-top: 3px;
+		border-radius: 3%;
+		background-color: black;
+	}
+	.speaker3{
+		height: 5px;
+		width: 40px;
+		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 0.55);
+		margin: auto;
+	}
+	.display3{
+		height: 230px;
+		width: 180px;
+		margin: auto;
+		background-color: blue;
+		border-radius: 1px;
+	}
+	#div1a
+	{
+		width: 60px;
+		height: 60px;
+		margin-left: 15px;
+		margin-top: 100px;
+		-webkit-transition:transform 5s;
+		border-radius: 7px;
+		-webkit-transform: translate(-10px,-98px);
+		background-color: black;
+	}
+	
+
+	#div2a
+	{
+		border: black 3px solid;
+		width: 60px;
+		height: 60px;
+		border-radius: 15px;
+		margin-left: 2px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(70px,-158px);
+        padding-left: 5px;
+        padding-right: 15px;
+        background-color: rgba(0, 0, 0, 0.561);
+	}
+	
+	#div3a
+	{
+		width: 60px;
+		height: 60px;
+		-webkit-transition:transform 5s;
+		border-radius: 7px;
+		margin-left: 67px;
+		-webkit-transform: translate(95px,-224px);
+		background-color: black;
+	}
+	
+	#div4a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 17px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+        -webkit-transform: translate(-10px,-223px);
+		background-color: black;
+		margin-top: 10px;
+	}
+	
+	#div5a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		border-radius: 7px;
+		margin-left: 70px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(15px,-292px);
+        margin-top: 40px;
+		background-color: black;
+	}
+	
+
+	#div6a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 67px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(95px,-353px);
+        margin-top: 33px;
+		background-color: rgba(0, 0, 0, 0.872);
+	}
+	
+	#div7a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 77px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(-70px,-348px);
+		background-color: rgba(0, 0, 0, 0.872);
+	}
+	
+	#div8a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 74px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(10px,-413px);
+        margin-top: 36px;
+		background-color: rgba(0, 0, 0, 0.872);
+	}
+	
+	#div9a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 67px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(95px,-478px);
+        margin-top: 37px;
+		background-color: rgba(0, 0, 0, 0.872);
+	}
+	
+	#div10a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 57px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(-50px,-473px);
+		background-color: rgba(0, 0, 0, 0.872);
+	}
+	
+	#div11a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 69px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(15px,-538px);
+        margin-top: 36px;
+		background-color: rgba(0, 0, 0, 0.872);
+	}
+	
+	#div12a
+	{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 67px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(95px,-603px);
+        margin-top: 37px;
+		background-color: rgba(0, 0, 0, 0.872);
+	}
+	
+	
+	#div13a{
+        border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 17px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(-10px,-598px);
+		background-color: rgba(0, 0, 0, 0.872);
+          }
+    
+    #div14a{
+		border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 64px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(20px,-690px);
+        margin-top: 63px;
+		background-color: rgba(0, 0, 0, 0.872);
+    }
+    
+    #div15a{
+        border: black 3px solid;
+		width: 55px;
+		height: 22px;
+		margin-left: 68px;
+		border-radius: 7px;
+		-webkit-transition:transform 5s;
+		-webkit-transform: translate(95px,-753px);
+        margin-top: 35px;
+		background-color: rgba(0, 0, 0, 0.872); 
+    }
+    
+	p{
+		color: blue;
+		text-align: center;
+	}
+	.circle{
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		background-color: red;
+		margin-left: 42px;
+	}
+	h1{
+		text-align: center;
+		color: white;
+	}
+	.back1{
+		height: 27px;
+		width: 57px;
+		border: 3px solid rgba(0, 0, 0, 0.069);
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		border-radius: 7px;
+	}
+	.green1{
+		height: 22px;
+		width: 55px;
+		border: 3px solid rgba(0, 0, 0, 0.069);
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		background-color: green;
+		border-radius: 7px;
+	}
+	.num1{
+		height: 27px;
+		width: 57px;
+		border: 3px solid rgba(0, 0, 0, 0.069);
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		border-radius: 7px;
+	}
+	.red1{
+		height: 22px;
+		width: 55px;
+		border: 3px solid rgba(0, 0, 0, 0.069);
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		background-color: red;
+		border-radius: 7px;
+	}
+	.charge{
+		height: 5px;
+		width: 30px;
+		margin: auto;
+		background-color: rgba(255, 255, 255, 0.668);
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border: 1px solid black;
+		margin-top: 3px;
+	}
+</style>
+</head>
+<body>
+	<div class="page">
+
+      <div class="jio">
+	  <div class="jio2">
+		<div class="display2">
+			<br><div class="speaker3"></div><br>
+			<div class="display3">
+				<br><br><br><div class="circle"><h1 style="font-size: 350%;">jio</h1></div>
+				<h1 style="font-size: 130%;"><br>jio</h1>
+			</div>
+			
+		</div>
+		<div id="div1a">
+			<div class="back1"></div>
+			<div class="green1"></div>
+		</div>
+	
+		<div id="div2a">
+			<div class="ok"><a href="first.html"> ...ok</a></div>
+		</div>
+	
+		<div id="div3a">
+			<div class="num1"></div>
+			<div class="red1"></div>
+		</div>
+		
+		<div id="div4a">
+			<p> 1</p>
+		</div>
+	
+		<div id="div5a">
+			<p>	2</p>
+		</div>
+	
+		<div id="div6a">
+			<p>	3</p>
+		</div>	
+	
+		<div id="div7a">
+			<p>	4</p>
+		</div>	
+		
+		<div id="div8a">
+			<p>	5</p>
+		</div>
+	
+		<div id="div9a">
+			<p>	6</p>
+		</div>
+	
+		<div id="div10a">
+			<p>	7</p>
+		</div>
+	
+		<div id="div11a">
+			<p> 8</p>
+		</div>
+	
+		<div id="div12a">
+			<p>	9</p>
+		</div>
+		
+		<div id="div13a">
+			<p>*</p>
+		</div>
+
+		<div id="div14a">
+			<p>0</p>
+		</div>
+
+		<div id="div15a">
+			<p>#</p>
+		</div>
+	 </div>
+	  <div class="charge"></div>
+    </div>
+
+</div>
+</body>
+</html>
