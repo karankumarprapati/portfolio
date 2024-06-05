@@ -15,6 +15,9 @@
 body{
     overflow-x: hidden;
 }
+.body.bg{
+    background: #121212;
+}
 .container{
     position: relative;
     width: 100%;
@@ -49,6 +52,7 @@ body{
     position: relative;
     width: 100%;
     list-style: none;
+    line-height: 3rem;
 }
 .navigation ul li a{
     position: relative;
@@ -180,7 +184,7 @@ h3.bg{
 p{
     color: #777;
 }
-.btn{
+/* .btn{
     position: relative;
     display: inline-block;
     padding: 10px 30px;
@@ -190,7 +194,7 @@ p{
     letter-spacing: 1px;
     margin-top: 10px;
     text-decoration: none;
-}
+} */
 .socialMedia{
    position: absolute;
    bottom: 20px;
@@ -325,7 +329,6 @@ h2.bg{
 }
 .services .content .serviceBox a{
     font-size: 60px;
-    /* color: var(--black); */
     text-decoration: none;
 }
 .services .content .serviceBox h2{
@@ -536,6 +539,82 @@ p.bg{
 .navigation .mode.bg{
     color: white;
 }
+.content .btn{
+    margin-top: 1rem;
+    position: relative;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    transition: 1s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+} 
+.content .btn:hover{
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 60px var(--clr),
+    0 0 100px var(--clr);
+}
+.content .btn::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 500%;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: cals(-0.33s * var(--i));
+}
+.content .btn:hover::before{
+    width: 120%;
+}
+.content .btn::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #0e1538;
+    transition: 0.5s;
+}
+.content .btn:hover::after{
+    background: blue;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+.content .btn span{
+    position: relative;
+    z-index: 1;
+    font-size: 1em;
+    color: #fff;
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.content .btn:hover span{
+    opacity: 1;
+}
+.pro{
+    font-size: 2rem;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.pro:hover{
+    font-size: 2.1rem;
+    box-shadow: 0 0 5px 5px darkblue;
+}
+    
 
 
 
@@ -547,7 +626,7 @@ p.bg{
     }
     .navigation.active{
         left: 0;
-        width: 100%;
+        width: 100vw;
         position: fixed;
         height: 100vh;
     }
@@ -557,6 +636,7 @@ p.bg{
     }
     .main.active{
         left: 100%;
+        /* position: fixed; */
     }
     .main .topbar{
         width: 100%;
